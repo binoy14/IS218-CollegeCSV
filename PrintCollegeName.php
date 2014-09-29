@@ -2,8 +2,10 @@
 
 	class PrintCollegeName {
 		public function __construct(Array $records){
+			$i = -1;
 			foreach($records as $record){
-				echo '<li>' . $record['INSTNM'] . '</li>';
+				$i++;
+				echo '<li><a href="?college=' .$i. '">' . $record['INSTNM'] . '</a></li>';
 			}
 		}
 	}
