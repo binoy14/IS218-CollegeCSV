@@ -8,20 +8,27 @@
 	</head>
 	<body>
 		<div class="container">
-			<h1>Colleges in United States of America</h1>
-			<ol class="college-names">
-				<?php 
+			<?php 
 
-					require 'GetCsv.php';
-					require 'PrintCollegeName.php';
+				require 'GetCsv.php';
+				require 'PrintCollegeName.php';
+				require 'PrintFullInfo.php';
 
-					$fileName = 'hd2013.csv';
-					$parameter = 'r';
-					$csv = new GetCsv();
-					$records = $csv->getCsv($fileName, $parameter);
+				$fileName = 'hd2013.csv';
+				$parameter = 'r';
+				$csv = new GetCsv();
+				$records = $csv->getCsv($fileName, $parameter);
+
+				if(isset($_GET['college'])){
+					$index = $_GET['college'];
+					new PrintFullInfo($index, $records);
+				} else{
+					echo '<h1>Colleges in United States of America</h1>';
+					echo '<ol class="college-names">';
 					new PrintCollegeName($records);
-				 ?>
-			</ol>
-		 </div>
+					echo '</ol>';
+				}
+			 ?>
+		</div>
 	</body>
 </html>
