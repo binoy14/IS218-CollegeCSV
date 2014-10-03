@@ -25,6 +25,7 @@
 			foreach($headings as $heading){
 				$finalHeading[$heading['varname']] = $heading['varTitle'];
 			}
+			FileUpload::close($headings);
 			return $finalHeading;
 		}
 	}
