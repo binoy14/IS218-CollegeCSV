@@ -14,7 +14,7 @@
 				require 'PrintCollegeName.php';
 				require 'PrintFullInfo.php';
 			
-				//ini_set('memory_limit', '-1');
+				ini_set('memory_limit', '-1');
 				$fileName = 'hd2013.csv';
 				$parameter = 'r';
 				$csv = new GetCsv();
