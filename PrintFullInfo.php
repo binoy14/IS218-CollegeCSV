@@ -1,22 +1,19 @@
 <?php 
 
+	require 'HtmlPrint.php';
+	
 	class PrintFullInfo {
 		public function __construct($index, Array $records){
 			$headings = self::getHeadings();
-			echo '<table class="table table-bordered">';
-		
-			foreach($headings as $heading){
-				echo '<th>' . $heading['varTitle'] . '</th>';
+			HtmlPrint::openTable();
+			
+			foreach($records[$index] as $key => $value){
+				HtmlPrint::openTr();
+				echo '<th>' . $headings[$key] . '</th>';
+				echo '<td>' . $value . '</td>';
+				HtmlPrint::closeTr();
 			}
-		
-			echo '<tr>';
-		
-			foreach($records[$index] as $record){
-				echo '<td>' . $record . '</td>';
-			}
-		
-			echo '</tr>';
-			echo '</table>';
+			HtmlPrint::closeTable();
 		}
 
 		public function getHeadings(){
@@ -24,8 +21,11 @@
 			$parameter = 'r';
 			$csv = new GetCsv();
 			$headings = $csv->getCsv($fileName, $parameter);
-
-			return $headings;
+			$finalHeading = array();
+			foreach($headings as $heading){
+				$finalHeading[$heading['varname']] = $heading['varTitle'];
+			}
+			return $finalHeading;
 		}
 	}
 
