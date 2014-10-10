@@ -1,4 +1,7 @@
 <?php 
+
+	namespace lib\classes;
+	
 	class FileUpload {
 
 		public function __construct(){

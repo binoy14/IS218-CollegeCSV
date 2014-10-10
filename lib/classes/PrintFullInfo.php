@@ -1,6 +1,6 @@
 <?php 
 
-	require 'HtmlPrint.php';
+	namespace lib\classes;
 	
 	class PrintFullInfo {
 		public function __construct($index, Array $records){

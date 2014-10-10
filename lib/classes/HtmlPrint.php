@@ -1,5 +1,7 @@
 <?php 
 
+	namespace lib\classes;
+	
 	class HtmlPrint{
 		static public function openTable(){
 			echo '<table class="table table-bordered table-responsive">';

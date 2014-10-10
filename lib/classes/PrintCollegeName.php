@@ -1,5 +1,7 @@
 <?php 
-
+	
+	namespace lib\classes;
+	
 	class PrintCollegeName {
 		public function __construct(Array $records){
 			$i = -1;

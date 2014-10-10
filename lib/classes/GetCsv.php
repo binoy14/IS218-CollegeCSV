@@ -1,6 +1,6 @@
 <?php 
-
-	require 'FileUpload.php';
+	
+	namespace lib\classes;
 	
 	class GetCsv {
 
@@ -11,8 +11,8 @@
 
 		public function getCsv($fileName, $parameter){
 			$first_row = TRUE;
-			if(($handle = FileUpload::fileupload($fileName,$parameter)) !== FALSE){
-				while(($row = fgetcsv($handle, ",")) !== FALSE){
+			if(($handler = FileUpload::fileupload($fileName,$parameter)) !== FALSE){
+				while(($row = fgetcsv($handler, ",")) !== FALSE){
 					if($first_row == TRUE){
 						$column_heading = $row;
 						$first_row = FALSE;
@@ -21,7 +21,7 @@
 						$records[] = $record;
 					}
 				}
-				FileUpload::close($handle);
+				FileUpload::close($handler);
 			}
 			return $records;
 		}
