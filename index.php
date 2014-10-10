@@ -16,7 +16,7 @@
 				$fileName = 'hd2013.csv';
 				$parameter = 'r';
 				$csv = new lib\classes\GetCsv();
-				$records = $csv->getCsv($fileName, $parameter);
+				$records = $csv->getCsv($fileName, $parameter, true);
 
 				if(isset($_GET['college'])){
 					$index = $_GET['college'];
