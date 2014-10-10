@@ -5,15 +5,7 @@
 	class PrintFullInfo {
 		public function __construct($index, Array $records){
 			$headings = self::getHeadings();
-			HtmlPrint::openTable();
-			
-			foreach($records[$index] as $key => $value){
-				HtmlPrint::openTr();
-				echo '<th>' . $headings[$key] . '</th>';
-				echo '<td>' . $value . '</td>';
-				HtmlPrint::closeTr();
-			}
-			HtmlPrint::closeTable();
+			new HtmlPrint($index, $records, $headings);
 		}
 
 		public function getHeadings(){
