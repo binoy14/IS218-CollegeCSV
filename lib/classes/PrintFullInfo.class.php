@@ -3,9 +3,9 @@
 	namespace lib\classes;
 	
 	class PrintFullInfo {
-		public function __construct($index, Array $records){
+		public function __construct($index, Array $records, $vertical = true){
 			$headings = self::getHeadings();
-			new HtmlPrint($index, $records, $headings);
+			new HtmlPrint($index, $records, $headings, $vertical);
 		}
 
 		public function getHeadings(){
