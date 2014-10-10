@@ -3,10 +3,6 @@
 	namespace lib\classes;
 	
 	class FileUpload {
-
-		public function __construct(){
-			return null;
-		}
 		
 		static public function fileupload($fileName, $parameter){
 			$handler = fopen($fileName, $parameter);
