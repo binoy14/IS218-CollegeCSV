@@ -3,7 +3,7 @@
 	namespace lib\classes;
 	
 	class HtmlPrint{
-		public function __construct($index, Array $records, $headings, $vertical = false){
+		public function __construct($index, Array $records, $headings, $vertical = true){
 			echo '<table class="table table-bordered table-responsive">';
 			if($vertical == true){
 				foreach($records[$index] as $key => $value){
@@ -13,20 +13,16 @@
 					echo '</tr>';
 				}
 			} else {
-				echo '<thead>';
+				echo '<tr>';
 				foreach($records[$index] as $key => $value){
-					echo '<tr>';
 						echo '<th>' . $headings[$key] . '</th>';
-					echo '</tr>';
 				}
-				echo '</thead>';
-				echo '<tbody>';
+				echo '</tr>';
+				echo '<tr>';
 				foreach($records[$index] as $key => $value){
-					echo '<tr>';
 						echo '<td>' . $value . '</td>';
-					echo '</tr>';
 				}
-				echo '</tbody>';
+				echo '</tr>';
 			}
 			echo '</table>';
 
