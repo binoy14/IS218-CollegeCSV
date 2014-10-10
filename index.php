@@ -15,6 +15,7 @@
 				require 'PrintFullInfo.php';
 			
 				ini_set('memory_limit', '-1');
+				//ini_set('display_errors', 1);
 				$fileName = 'hd2013.csv';
 				$parameter = 'r';
 				$csv = new GetCsv();
@@ -28,6 +29,7 @@
 					echo '<ol class="college-names">';
 					new PrintCollegeName($records);
 					echo '</ol>';
+
 				}
 			 ?>
 		</div>
