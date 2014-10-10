@@ -27,11 +27,5 @@
 			echo '</table>';
 
 		}
-
-		public function printHorizontalTable($index, Array $records){
-			
-		}
-
-
 	}
  ?>
