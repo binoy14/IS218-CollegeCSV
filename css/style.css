@@ -1,0 +1,17 @@
+.college-names{
+	font-size: 18px;
+}
+body{
+	background-color: #FAF9E8;
+}
+.list{
+	width: 30%;
+	position: absolute;
+}
+.result{
+	width :60%;
+	float: right;
+	margin: 50px 10px 0 30px;
+	position: relative;
+	overflow : auto;
+}
