@@ -6,7 +6,6 @@ $(document).ready(function(){
 		$.ajax({
 			url : url,
 			success : function(response){
-				window.resp = response;
 				$('.result').html('<center><h2>' + title + '</h2></center>');
 				$('.result').append($(response).find('table'));
 			}
