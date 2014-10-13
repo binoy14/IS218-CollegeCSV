@@ -21,8 +21,8 @@
 						$records[] = $record;
 					}
 				}
-				FileUpload::close($handler);
 			}
+			FileUpload::close($handler);
 			return $records;
 		}
 	}
