@@ -30,8 +30,15 @@
 					echo '</ol>';
 				}
 			 ?>
-			 </div>
-			 <div class="result"></div>
+			</div>
+			<div class="result"></div>
+
+			<div class="scroll-top page-scroll visible-xs visble-sm">
+		    	<a class="btn btn-primary" href="#page-top">
+		    		<i class="fa fa-chevron-up"></i>
+		        </a>
+		    </div>
+		    
 		</div>
 		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 		<script type="text/javascript" src="js/ajaxPrint.js"></script>
