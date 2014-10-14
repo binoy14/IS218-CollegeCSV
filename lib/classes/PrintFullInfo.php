@@ -2,7 +2,7 @@
 
 	namespace lib\classes;
 	
-	class PrintFullInfo {
+	class PrintFullInfo implements \lib\interfaces\PrintFullInfo {
 		public function __construct($index, Array $records, $vertical = true){
 			$headings = self::getHeadings();
 			new HtmlPrint($index, $records, $headings, $vertical);

@@ -2,7 +2,7 @@
 
 	namespace lib\classes;
 	
-	class FileUpload {
+	class FileUpload implements \lib\interfaces\FileUpload {
 		
 		static public function fileupload($fileName, $parameter){
 			$handler = fopen($fileName, $parameter);

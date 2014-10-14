@@ -2,7 +2,7 @@
 
 	namespace lib\classes;
 	
-	class HtmlPrint{
+	class HtmlPrint implements \lib\interfaces\HtmlPrint {
 		public function __construct($index, Array $records, $headings, $vertical = true){
 			echo '<table class="table table-bordered table-responsive">';
 			if($vertical == true){

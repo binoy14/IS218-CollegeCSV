@@ -2,7 +2,7 @@
 	
 	namespace lib\classes;
 	
-	class PrintCollegeName {
+	class PrintCollegeName implements \lib\interfaces\PrintCollegeName {
 		public function __construct(Array $records){
 			$i = -1;
 			foreach($records as $record){

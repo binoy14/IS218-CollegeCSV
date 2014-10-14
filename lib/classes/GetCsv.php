@@ -2,7 +2,7 @@
 	
 	namespace lib\classes;
 	
-	class GetCsv {
+	class GetCsv implements \lib\interfaces\GetCsv {
 
 
 		public function __construct(){
