@@ -26,5 +26,13 @@
 			}
 			echo '</table>';
 		}
+
+		public static function makeLinks(Array $records, $urlName, $printName){
+			$i = -1;
+			foreach($records as $record){
+				$i++;
+				echo '<li><a class="college-name-link" href="?' . $urlName . '=' . $i . '">' . $record[$printName] . '</a></li>';
+			}
+		}
 	}
  ?>
