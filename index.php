@@ -26,19 +26,14 @@
 				} else{
 					echo '<h1>Colleges in United States of America</h1>';
 					echo '<ol class="college-names">';
-					new lib\classes\PrintCollegeName($records);
+					$urlName = 'college';
+					$printName = 'INSTNM';
+					lib\classes\HtmlPrint::makeLinks($records,$urlName,$printName);
 					echo '</ol>';
 				}
 			 ?>
 			</div>
 			<div class="result"></div>
-
-			<div class="scroll-top page-scroll visible-xs visble-sm">
-		    	<a class="btn btn-primary" href="#page-top">
-		    		<i class="fa fa-chevron-up"></i>
-		        </a>
-		    </div>
-		    
 		</div>
 		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 		<script type="text/javascript" src="js/ajaxPrint.js"></script>
